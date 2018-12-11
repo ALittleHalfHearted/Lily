@@ -7,7 +7,6 @@ client.on('ready', () => {
 });
 
 client.on('message', message => {
-	message.content = message.content.toLowerCase()
 	if (message.content.substring(0,2) === 'L!' && message.author.bot == false) {
 		var args = message.content.substring(2).split(' ');
 		var cmd = args[0];
