@@ -8,20 +8,17 @@ client.on('ready', () => {
 
 client.on('message', message => {
 	message.content = message.content.toLowerCase()
-	if (message.content.substring(0,1) === '%' && message.author.bot == false) {
-		var args = message.content.substring(1).split(' ');
+	if (message.content.substring(0,2) === 'L!' && message.author.bot == false) {
+		var args = message.content.substring(2).split(' ');
 		var cmd = args[0];
 		args = args.splice(1).toString().replace(/,/g,' ');
 		
 		switch(cmd){
 			case 'ping':
-				message.reply('Pong!');
-			break;
-			case 'pong':
-				message.reply('Ping!');
+				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			default:
-				message.reply('Sorry dear, I didn't quite catch that. Could you repeat yourself?');
+				message.reply('Sorry dear, I didn\'t quite catch that. Could you repeat yourself?');
 		}
 	}
 })
