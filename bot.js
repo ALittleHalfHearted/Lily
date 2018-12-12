@@ -10,9 +10,7 @@ client.on('message', message => {
 	if (message.content.substring(0,2) === 'L!' && message.author.bot == false) {
 		var args = message.content.substring(2).split(' ');
 		var cmd = args[0];
-		console.log(args, "\n", cmd);
 		args = args.splice(1).toString().replace(/,/g,' ');
-		console.log(args);
 		
 		switch(cmd){
 			case 'ping':
