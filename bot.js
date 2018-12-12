@@ -3,7 +3,7 @@ const client = new Discord.Client();
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
-	client.user.setActivity('type L!help for commands');
+	client.user.setActivity('If you need help, L!ask');
 });
 
 client.on('message', message => {
