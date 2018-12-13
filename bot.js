@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const OwnerID = 220176861379035137;
+const OwnerDM = 522870604353765386;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
