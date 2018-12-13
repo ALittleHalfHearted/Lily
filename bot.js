@@ -21,7 +21,7 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					console.log(message.author.dmChannel);
+					console.log(JSON.parse("package.json"));
 					//OwnerDM.send('Testing');
 				}
 			break;
