@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var fs = require("fs");
 var contents = fs.readFileSync("package.json");
 const jsonContent = JSON.parse(contents);
-console.log(jsonContent.DMChannel);
+const DMOwner = jsonContent.DMChannel;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -19,7 +19,7 @@ client.on('message', message => {
 		switch(cmd){
 			case 'owner':
 				console.log(message.author.id);
-				if(message.author.id != jsonContent.DMChannel.recipient.User.id){
+				if(message.author.id != DMOwner.recipient.User.id){
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
