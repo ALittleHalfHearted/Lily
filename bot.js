@@ -14,6 +14,14 @@ client.on('message', message => {
 		args = args.splice(1).toString().replace(/,/g,' ');
 		
 		switch(cmd){
+			case 'owner':
+				console.log(message.author.id);
+				if(message.author.id != 220176861379035137){
+					message.reply('Strangers are scary');
+				}else{
+					message.reply('all hail the creator');
+				}
+			break;
 			case 'ping':
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
