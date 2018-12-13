@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const OwnerID = 220176861379035137;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 	client.user.setActivity('If you need help, L!ask');
-	//const Owner = user.id = 
 });
 
 client.on('message', message => {
@@ -16,7 +16,7 @@ client.on('message', message => {
 		switch(cmd){
 			case 'owner':
 				console.log(message.author.id);
-				if(message.author.id != 220176861379035137){
+				if(message.author.id != OwnerID){
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
