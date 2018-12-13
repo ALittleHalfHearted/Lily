@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const OwnerID = 220176861379035137;
 const OwnerDM = 522870604353765386;
 var fs = require("fs");
-var contents = fs.readFileSync("jsoncontent.json");
+var contents = fs.readFileSync("package.json");
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
