@@ -20,7 +20,7 @@ client.on('message', message => {
 		switch(cmd){
 			case 'owner':
 				console.log(message.author.id);
-				if(message.author.id != DMOwner.DMChannel.recipient.User.id){
+				if(message.author.id != DMOwner.recipient.User.id){
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
