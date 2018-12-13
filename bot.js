@@ -22,6 +22,7 @@ client.on('message', message => {
 				}else{
 					message.reply('all hail the creator');
 					console.log(message.author.dmChannel.id);
+					OwnerDM.send('Testing');
 				}
 			break;
 			case 'ping':
