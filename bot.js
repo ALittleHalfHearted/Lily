@@ -3,7 +3,8 @@ const client = new Discord.Client();
 var fs = require("fs");
 var contents = fs.readFileSync("package.json");
 const jsonContent = JSON.parse(contents);
-const DMOwner = jsonContent.DMOwner;
+var DMOwner = new Discord.DMChannel();
+DMOwner = jsonContent.DMOwner;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
