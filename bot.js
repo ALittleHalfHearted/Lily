@@ -1,9 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const Creator = user.id = 220176861379035137;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 	client.user.setActivity('If you need help, L!ask');
+	Creator.createDM().message('Ready!');
 });
 
 client.on('message', message => {
