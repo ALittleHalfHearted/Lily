@@ -14,7 +14,7 @@
   "DMChannel": {
    "type": "dm",
    "id": "522870604353765386",
-   "recipient": "User" {
+   "recipient": "User": {
       "id": "220176861379035137",
       "discriminator": "7148",
       "bot": "false"
