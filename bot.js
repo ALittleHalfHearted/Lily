@@ -23,7 +23,7 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					jsonContent.DMChannel.send('bluh');
+					//jsonContent.DMChannel.send('bluh');
 				}
 			break;
 			case 'ping':
