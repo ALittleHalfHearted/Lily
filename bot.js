@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var fs = require("fs");
 var contents = fs.readFileSync("package.json");
 const jsonContent = JSON.parse(contents);
-const DMOwner = jsonContent.DMChannel;
+const DMOwner = jsonContent.DMOwner;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -23,7 +23,7 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					//jsonContent.DMChannel.send('bluh');
+					DMOwner.send('bluh');
 				}
 			break;
 			case 'ping':
