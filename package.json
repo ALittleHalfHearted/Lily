@@ -15,10 +15,10 @@
    "type": "dm",
    "id": "522870604353765386",
    "recipient":
-    "User" {
+   "User": {
       "id": "220176861379035137",
       "discriminator": "7148",
-      "bot": "false",
+      "bot": "false"
     }
   }
 }
