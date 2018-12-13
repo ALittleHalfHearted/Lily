@@ -24,7 +24,7 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					DMOwner.DMChannel.send('bluh');
+					DMOwner.send('bluh');
 				}
 			break;
 			case 'ping':
