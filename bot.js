@@ -4,7 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
 	client.user.setActivity('If you need help, L!ask');
-	//220176861379035137.createDM().message('Ready!');
+	//const Owner = user.id = 
 });
 
 client.on('message', message => {
