@@ -20,6 +20,7 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
+					console.log(message.channel);
 				}
 			break;
 			case 'ping':
