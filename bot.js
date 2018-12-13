@@ -22,10 +22,9 @@ client.on('message', message => {
 				}else{
 					message.reply('all hail the creator');
 					request.open("GET", "package.json", false);
-   					request.send(null)
+   					request.send(null);
    					var my_JSON_object = JSON.parse(request.responseText);
-   					alert (my_JSON_object.result[0]);
-
+   					console.log(my_JSON_object.result[0]);
 					//console.log(JSON.parse("package.json"));
 					//OwnerDM.send('Testing');
 				}
