@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const OwnerID = 220176861379035137;
 const OwnerDM = 522870604353765386;
+var fs = require("fs");
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
@@ -21,10 +22,6 @@ client.on('message', message => {
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					request.open("GET", "package.json", false);
-   					request.send(null);
-   					var my_JSON_object = JSON.parse(request.responseText);
-   					console.log(my_JSON_object.result[0]);
 					//console.log(JSON.parse("package.json"));
 					//OwnerDM.send('Testing');
 				}
