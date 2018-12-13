@@ -16,6 +16,17 @@ client.on('message', message => {
 			case 'ping':
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
+			case 'ask':
+				switch(args){
+					default:
+						message.reply('The following questions are some of the most common ones people ask me'+
+							      ':\n\n:one: | sample text\n:asterisk: | Suggest a question or feature!'+
+							      'Ask your question by typing `L!ask #` and I will respond right away.\n\n' +
+							      'You can also ask for various information regarding my friends and I'+
+							      ' with `L!fact`. If you are more interested in a casual, polite conversation,'+
+							      'I would be happy to oblige with `L!day`.');
+				}
+			break;
 			default:
 				message.reply('Sorry dear, I didn\'t quite catch that. Could you repeat yourself?');
 		}
