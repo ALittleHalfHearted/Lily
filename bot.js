@@ -1,10 +1,8 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const OwnerID = 220176861379035137;
-const OwnerDM = 522870604353765386;
 var fs = require("fs");
 var contents = fs.readFileSync("package.json");
-var jsonContent = JSON.parse(contents);
+const jsonContent = JSON.parse(contents);
 console.log(jsonContent.DMChannel);
 
 client.on('ready', () => {
@@ -21,12 +19,11 @@ client.on('message', message => {
 		switch(cmd){
 			case 'owner':
 				console.log(message.author.id);
-				if(message.author.id != OwnerID){
+				if(message.author.id != jsonContent.DMChannel.recipient.User.id){
 					message.reply('Strangers are scary');
 				}else{
 					message.reply('all hail the creator');
-					//console.log(JSON.parse("package.json"));
-					//OwnerDM.send('Testing');
+					jsonContent.DMChannel.send('bluh');
 				}
 			break;
 			case 'ping':
