@@ -43,7 +43,7 @@ client.on('message', message => {
 					break;
 					default:
 						message.reply('The following questions are some of the most common ones people ask me'+
-							      ':\n\n:one: | What/who are "the pets"?\n'//:asterisk: | Suggest a question or feature!\n'+
+							      ':\n\n:one: | What/who are "the pets"?\n' + //:asterisk: | Suggest a question or feature!\n'+
 							      'Ask your question by typing `L!ask #` and I will respond right away.\n\n' +
 							      'You can also ask for various information regarding my friends and I'+
 							      ' with `L!fact`. If you are more interested in a casual, polite'+
