@@ -30,6 +30,9 @@ client.on('message', message => {
 			case 'ping':
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
+			case 'entrance':
+				//bot.beDramatic = true;
+			break;
 			case 'ask':
 				switch(args){
 					case '1':
