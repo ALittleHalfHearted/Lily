@@ -31,7 +31,7 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'entrance':
-				//bot.beDramatic = true;
+				message.channel.send('@Alan Bernard#0753, thank you so much for creating this server and giving us pet-lovers a place to hang out! After the not-so-recent developments in the official BCB server, this community has only become more and more important, not only to me but to everyone here. Thank you so much!\n\n\t--Jaden (Broken by Design)');
 			break;
 			case 'ask':
 				switch(args){
