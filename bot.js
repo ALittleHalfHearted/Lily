@@ -15,7 +15,7 @@ client.on('message', message => {
 	if (message.content.substring(0,2) === 'L!' && message.author.bot == false) {
 		var args = message.content.substring(2).split(' ');
 		var cmd = args[0];
-		args = args.splice(1).toString().replace(/,/g,' ');
+		args = args.splice(1);
 		
 		switch(cmd){
 			/*case 'owner':
@@ -30,8 +30,18 @@ client.on('message', message => {
 			case 'ping':
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
-			case 'entrance':
-				message.channel.send('@Alan Bernard#0753, thank you so much for creating this server and giving us pet-lovers a place to hang out! After the not-so-recent developments in the official BCB server, this community has only become more and more important, not only to me but to everyone here. Thank you so much!\n\n\t--Jaden (Broken by Design)');
+			case 'pp':
+				if(args(0).toLowerCase() == 'set'){
+					message.mentions.setNote(args(2));
+				}
+				else if(args(0).toLowerCase() == 'give'){
+					if(message.mentions.note == ''){
+						message.mentions.setNote(1);
+					}
+					else{
+						message.mentions.setNote(parseInt(message.mentions.note) + 1);
+					}
+				}
 			break;
 			case 'ask':
 				switch(args){
