@@ -31,15 +31,19 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'pp':
+				var target = message.mentions;
 				if(args(0).toLowerCase() == 'set'){
-					message.mentions.setNote(args(2));
+					target.setNote(args(2));
 				}
-				else if(args(0).toLowerCase() == 'give'){
-					if(message.mentions.note == ''){
-						message.mentions.setNote(1);
+				else if(args(0).toLowerCase() == 'check'){
+					message.channel.send('${target} has ${(target.note > 0) ? target.note:0} Pet Points!');
+				}
+				else{
+					if(target.note == ''){
+						target.setNote(1);
 					}
 					else{
-						message.mentions.setNote(parseInt(message.mentions.note) + 1);
+						target.setNote(parseInt(target.note) + 1);
 					}
 				}
 			break;
