@@ -36,7 +36,7 @@ client.on('message', message => {
 					target.setNote(args[2]);
 				}
 				else if(args[0].toLowerCase() == 'check'){
-					message.channel.send('${target} has ${(target.note > 0) ? target.note:0} Pet Points!');
+					message.channel.send(`${target} has ${(target.note > 0) ? target.note:0} Pet Points!`);
 				}
 				else{
 					if(target.note == ''){
