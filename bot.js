@@ -32,10 +32,10 @@ client.on('message', message => {
 			break;
 			case 'pp':
 				var target = message.mentions;
-				if(args(0).toLowerCase() == 'set'){
-					target.setNote(args(2));
+				if(args[0].toLowerCase() == 'set'){
+					target.setNote(args[2]);
 				}
-				else if(args(0).toLowerCase() == 'check'){
+				else if(args[0].toLowerCase() == 'check'){
 					message.channel.send('${target} has ${(target.note > 0) ? target.note:0} Pet Points!');
 				}
 				else{
