@@ -31,7 +31,7 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'pp':
-				let member = message.mentions.members.first();
+				let member = message.mentions.members.first().user;
 				if(args[0].toLowerCase() == 'set'){
 					member.setNote(args[2]);
 					console.log(`${member} has ${member.note} Pet Points!`);
