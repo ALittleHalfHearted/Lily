@@ -45,6 +45,7 @@ client.on('message', message => {
 					else{
 						target.setNote(parseInt(target.note) + 1);
 					}
+					console.log(`${target} has ${target.note} Pet Points!`)
 				}
 			break;
 			case 'ask':
