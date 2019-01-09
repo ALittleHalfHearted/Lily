@@ -33,17 +33,21 @@ client.on('message', message => {
 			case 'pp':
 				let member = message.mentions.members.first().user;
 				if(args[0].toLowerCase() == 'set'){
-					member.setNote(args[2]);
+					member.setNote(args[2])
+						.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
+
 				}
 				else if(args[0].toLowerCase() == 'check'){
 					message.channel.send(`${member} has ${(member.note > 0) ? member.note:0} Pet Points!`);
 				}
 				else{
 					if(Number(member.note) == NaN){
-						member.setNote('1');
+						member.setNote('1')
+							.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
 					}
 					else{
-						member.setNote((parseInt(member.note) + 1).toString);
+						member.setNote((parseInt(member.note) + 1).toString)
+							.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
 					}
 				}
 				console.log(`${member} has ${member.note} Pet Points!`);
