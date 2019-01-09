@@ -31,21 +31,22 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'pp':
-				var target = message.mentions.members.first();
+				let member = message.mentions.members.first();
 				if(args[0].toLowerCase() == 'set'){
-					target.setNote(args[2]);
+					member.setNote(args[2]);
+					console.log(`${member} has ${member.note} Pet Points!`);
 				}
 				else if(args[0].toLowerCase() == 'check'){
-					message.channel.send(`${target} has ${(target.note > 0) ? target.note:0} Pet Points!`);
+					message.channel.send(`${member} has ${(member.note > 0) ? member.note:0} Pet Points!`);
 				}
 				else{
-					if(Number(target.note) == NaN){
-						target.setNote(1);
+					if(Number(member.note) == NaN){
+						member.setNote(1);
 					}
 					else{
-						target.setNote(parseInt(target.note) + 1);
+						member.setNote(parseInt(member.note) + 1);
 					}
-					console.log(`${target} has ${target.note} Pet Points!`)
+					console.log(`${member} has ${member.note} Pet Points!`);
 				}
 			break;
 			case 'ask':
