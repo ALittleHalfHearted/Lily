@@ -34,20 +34,19 @@ client.on('message', message => {
 				let member = message.mentions.members.first().user;
 				if(args[0].toLowerCase() == 'set'){
 					member.setNote(args[2]);
-					console.log(`${member} has ${member.note} Pet Points!`);
 				}
 				else if(args[0].toLowerCase() == 'check'){
 					message.channel.send(`${member} has ${(member.note > 0) ? member.note:0} Pet Points!`);
 				}
 				else{
 					if(Number(member.note) == NaN){
-						member.setNote(1);
+						member.setNote('1');
 					}
 					else{
-						member.setNote(parseInt(member.note) + 1);
+						member.setNote((parseInt(member.note) + 1).toString);
 					}
-					console.log(`${member} has ${member.note} Pet Points!`);
 				}
+				console.log(`${member} has ${member.note} Pet Points!`);
 			break;
 			case 'ask':
 				switch(args){
