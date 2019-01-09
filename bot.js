@@ -39,7 +39,7 @@ client.on('message', message => {
 					message.channel.send(`${target} has ${(target.note > 0) ? target.note:0} Pet Points!`);
 				}
 				else{
-					if(target.note == ''){
+					if(Number(target.note) == NaN){
 						target.setNote(1);
 					}
 					else{
