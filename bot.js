@@ -31,7 +31,7 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'pp':
-				var target = message.mentions.users;
+				var target = message.mentions.members.first();
 				if(args[0].toLowerCase() == 'set'){
 					target.setNote(args[2]);
 				}
