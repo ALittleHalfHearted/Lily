@@ -31,26 +31,26 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'pp':
-				let member = message.mentions.members.first().user;
+				let user = message.mentions.users.first();
 				if(args[0].toLowerCase() == 'set'){
-					member.setNote(args[2])
+					user.setNote(args[2])
 						.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
 
 				}
 				else if(args[0].toLowerCase() == 'check'){
-					message.channel.send(`${member} has ${(member.note > 0) ? member.note:0} Pet Points!`);
+					message.channel.send(`${user} has ${(user.note > 0) ? user.note:0} Pet Points!`);
 				}
 				else{
-					if(Number(member.note) == NaN){
-						member.setNote('1')
+					if(Number(user.note) == NaN){
+						user.setNote('1')
 							.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
 					}
 					else{
-						member.setNote((parseInt(member.note) + 1).toString)
+						user.setNote((parseInt(user.note) + 1).toString)
 							.catch(error => message.reply(`Sorry ${message.author}, I encountered an error : ${error}`));
 					}
 				}
-				console.log(`${member} has ${member.note} Pet Points!`);
+				console.log(`${user} has ${user.note} Pet Points!`);
 			break;
 			case 'ask':
 				switch(args){
