@@ -31,12 +31,12 @@ client.on('message', message => {
 				message.reply('Pong!\n\nIs a fun game, I agree.');
 			break;
 			case 'help':
-				message.reply('The following questions are some of the most common ones people have about this server:'+
-					      ':\n\n:one: | What/who are "the pets"?\n' + //:asterisk: | Suggest a question or feature!\n'+
-					      'Ask your question by typing `L!ask [#]` and I will respond right away.\n\n' +
-					      'You can also ask for various information regarding my friends and I'+
-					      ' with `L!fact`. If you are more interested in a casual, polite'+
-					      ' conversation, I would be happy to oblige with `L!day`.');
+				message.reply('Ask me a question by typing `L!ask [#]` and I will respond right away. The following is a list of frequently asked questions about the server:\n'+
+					      '\n:one: | What/who are "the pets"?\n:two: | Can you give me more information on Yashy?\n:three: | Can you give me more information on Chirpy?' + 
+					      '\n:four: | Can you give me more information on Blur?\n:five: | Can you give me more information on Lily?\n:six: | Can you give me more information on Error?' +
+					      //:asterisk: | Suggest a question or feature!\n'+
+					      //'You can also ask for miscelaneous information regarding my friends and I with `L!fact`. If you are more interested in a casual, polite'+
+					      //' conversation, I would be happy to oblige with `L!day`.');
 			break;
 			case 'pp':
 				let user = message.mentions.users.first();
