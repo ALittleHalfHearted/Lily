@@ -8,7 +8,7 @@ DMOwner = jsonContent.DMChannel;
 
 client.on('ready', () => {
 	console.log(`Logged in as ${client.user.tag}!`);
-	client.user.setActivity('If you need help, L!ask');
+	client.user.setActivity('I\'m here to L!help');
 });
 
 client.on('message', message => {
@@ -29,6 +29,14 @@ client.on('message', message => {
 			break;*/
 			case 'ping':
 				message.reply('Pong!\n\nIs a fun game, I agree.');
+			break;
+			case 'help':
+				message.reply('The following questions are some of the most common ones people have about this server:'+
+					      ':\n\n:one: | What/who are "the pets"?\n' + //:asterisk: | Suggest a question or feature!\n'+
+					      'Ask your question by typing `L!ask [#]` and I will respond right away.\n\n' +
+					      'You can also ask for various information regarding my friends and I'+
+					      ' with `L!fact`. If you are more interested in a casual, polite'+
+					      ' conversation, I would be happy to oblige with `L!day`.');
 			break;
 			case 'pp':
 				let user = message.mentions.users.first();
@@ -63,13 +71,6 @@ client.on('message', message => {
 							      'forces to keep the comic from becoming too melodromatic, and sometimes I would guide the kids on the'+
 							      ' right path, but after Lucy\'s... Incedent, we have been largely absent. Perhaps to allow for a more intense plotline?');
 					break;
-					default:
-						message.reply('The following questions are some of the most common ones people ask me'+
-							      ':\n\n:one: | What/who are "the pets"?\n' + //:asterisk: | Suggest a question or feature!\n'+
-							      'Ask your question by typing `L!ask #` and I will respond right away.\n\n' +
-							      'You can also ask for various information regarding my friends and I'+
-							      ' with `L!fact`. If you are more interested in a casual, polite'+
-							      ' conversation, I would be happy to oblige with `L!day`.');
 				}
 			break;
 			case 'fact':
